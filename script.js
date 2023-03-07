@@ -66,8 +66,7 @@ let weather = {
         if (request.status === 200){
           // Success!
           var data = JSON.parse(request.responseText);
-          console.log(data.results[0]); // print the location
-          weather.fetchWeather(data.results[0].components.city);
+          weather.fetchWeather(data.results[0].components.village);
     
         } else if (request.status <= 500){
           // We reached our target server, but it returned an error
